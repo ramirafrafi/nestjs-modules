@@ -1,11 +1,9 @@
 # nestjs-casl
 
-This library was generated with [Nx](https://nx.dev).
+## Overview
+This library is a NestJS module that wraps the [**CASL**](https://casl.js.org/) package, a powerful JavaScript package for access authorization management.
 
-## Building
+This library is the NestJS way to integrate CASL, leveraging the usage of NestJS features such as guards, controller method decorators, and etc..
 
-Run `nx build nestjs-casl` to build the library.
-
-## Running unit tests
-
-Run `nx test nestjs-casl` to execute the unit tests via [Jest](https://jestjs.io).
+## Documentation
+*Coming soon..*
