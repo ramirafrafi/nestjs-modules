@@ -1,7 +1,10 @@
 # NestJS Modules
 
 ## Overview
-Welcome to the NestJs **Modules project** 🖐️, a set of open source NestJS modules grouped in this repository. These modules are well designed and tested.
+Welcome to the **NestJS Modules** project 👋.
+
+This repository groups a set of open source NestJS modules, that are well designed and tested.
 
 ## List of available modules
 * [nestjs-casl](./packages/nestjs-casl/README.md)
+* [nestjs-azure-storage-blob](./packages/nestjs-azure-storage-blob/README.md)

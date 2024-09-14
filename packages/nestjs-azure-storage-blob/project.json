@@ -1,0 +1,33 @@
+{
+  "name": "nestjs-azure-storage-blob",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nestjs-azure-storage-blob/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/nestjs-azure-storage-blob",
+        "tsConfig": "packages/nestjs-azure-storage-blob/tsconfig.lib.json",
+        "packageJson": "packages/nestjs-azure-storage-blob/package.json",
+        "main": "packages/nestjs-azure-storage-blob/src/index.ts",
+        "assets": ["packages/nestjs-azure-storage-blob/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

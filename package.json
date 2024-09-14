@@ -13,6 +13,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@azure/storage-blob": "^12.24.0",
     "@casl/ability": "^6.7.1",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
