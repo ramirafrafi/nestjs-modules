@@ -1,11 +1,11 @@
+⬅️ [**Return to modules list**](../../README.md)
+
 # nestjs-azure-storage-blob
 
-This library was generated with [Nx](https://nx.dev).
+## Overview
+This library is a NestJS module that wraps [**@azure/storage-blob**](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/storage/storage-blob/README.md), the official Node.js SDK for Microsoft Azure Storage Blob.
 
-## Building
+This module is the NestJS way to integrate `@azure/storage-blob`, leveraging the usage of NestJS features such as module-level configuration, dependency injection and etc..
 
-Run `nx build nestjs-azure-storage-blob` to build the library.
-
-## Running unit tests
-
-Run `nx test nestjs-azure-storage-blob` to execute the unit tests via [Jest](https://jestjs.io).
+## Documentation
+*Coming soon..*
