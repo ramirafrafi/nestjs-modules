@@ -1,4 +1,4 @@
-⬅️ [**Return to modules list**](../../README.md)
+⬅️ [**Return to modules list**](../..)
 
 # nestjs-azure-storage-blob
 
