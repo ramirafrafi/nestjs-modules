@@ -1,11 +1,14 @@
+⬅️ [**Return to modules list**](../..)
+
 # nestjs-opentelemetry
 
-This library was generated with [Nx](https://nx.dev).
+## Overview
+This library is a NestJS module integrating **OpenTelemetry Protocol** into a NestJS application.
 
-## Building
+It automatically configures [**OpenTelemetry SDK**](https://www.npmjs.com/package/@opentelemetry/sdk-node) to capture the call stack of each request, and differentiate the called layers (**Guards**, **Controllers**, **Services**, **Repositories**, etc..)
 
-Run `nx build nestjs-opentelemetry` to build the library.
+This module leverages the usage of NestJS features such as module-level configuration, decorators and etc..
 
-## Running unit tests
-
-Run `nx test nestjs-opentelemetry` to execute the unit tests via [Jest](https://jestjs.io).
+## Documentation
+*Coming soon..*
+ 
