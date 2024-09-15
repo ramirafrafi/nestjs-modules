@@ -20,7 +20,8 @@
         "packages/nestjs-azure-storage-blob/src/index.ts"
       ],
       "@nestjs-casl": ["packages/nestjs-casl/src/index.ts"],
-      "nestjs-lock": ["packages/nestjs-lock/src/index.ts"]
+      "nestjs-lock": ["packages/nestjs-lock/src/index.ts"],
+      "nestjs-opentelemetry": ["packages/nestjs-opentelemetry/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

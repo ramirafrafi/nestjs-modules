@@ -1,0 +1,33 @@
+{
+  "name": "nestjs-opentelemetry",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nestjs-opentelemetry/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/nestjs-opentelemetry",
+        "tsConfig": "packages/nestjs-opentelemetry/tsconfig.lib.json",
+        "packageJson": "packages/nestjs-opentelemetry/package.json",
+        "main": "packages/nestjs-opentelemetry/src/index.ts",
+        "assets": ["packages/nestjs-opentelemetry/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
