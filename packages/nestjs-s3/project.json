@@ -1,0 +1,33 @@
+{
+  "name": "nestjs-s3",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nestjs-s3/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/nestjs-s3",
+        "tsConfig": "packages/nestjs-s3/tsconfig.lib.json",
+        "packageJson": "packages/nestjs-s3/package.json",
+        "main": "packages/nestjs-s3/src/index.ts",
+        "assets": ["packages/nestjs-s3/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
