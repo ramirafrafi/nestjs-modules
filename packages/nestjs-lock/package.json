@@ -1,0 +1,16 @@
+{
+  "name": "@ramirafrafi/nestjs-lock",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "async-mutex": "^0.5.0",
+    "simple-redis-mutex": "^1.4.0",
+    "ioredis": "^5.4.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.2"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
+}
