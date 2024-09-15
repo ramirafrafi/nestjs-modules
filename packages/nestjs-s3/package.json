@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-s3",
+  "name": "@ramirafrafi/nestjs-s3",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
