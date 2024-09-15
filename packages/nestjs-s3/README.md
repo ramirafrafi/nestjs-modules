@@ -1,11 +1,12 @@
+⬅️ [**Return to modules list**](../..)
+
 # nestjs-s3
 
-This library was generated with [Nx](https://nx.dev).
+## Overview
+This library is a NestJS module that wraps the **AWS S3 Node.js SDKs** into a well defined set of services and methods.
 
-## Building
+This module leverages the usage of NestJS features such as module-level configuration, dependecy injection and etc..
 
-Run `nx build nestjs-s3` to build the library.
-
-## Running unit tests
-
-Run `nx test nestjs-s3` to execute the unit tests via [Jest](https://jestjs.io).
+## Documentation
+*Coming soon..*
+ 
