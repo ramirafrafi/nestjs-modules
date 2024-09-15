@@ -1,11 +1,13 @@
+⬅️ [**Return to modules list**](../..)
+
 # nestjs-lock
 
-This library was generated with [Nx](https://nx.dev).
+## Overview
+This library is a NestJS module offering a solution to manage locks across NestJS instances.
 
-## Building
+Locks can be **In-memory** to manage a single instance of NestJS, or **Redis-based** for a distributed lock across multiple instances. This solution is agnostic to the nature of locks, means the lock can be a **MUTEX**, a **Semaphore** or any other possible kind of lock.
 
-Run `nx build nestjs-lock` to build the library.
+This module leverages the usage of NestJS features such as dependency injection, decorators and etc..
 
-## Running unit tests
-
-Run `nx test nestjs-lock` to execute the unit tests via [Jest](https://jestjs.io).
+## Documentation
+*Coming soon..*
