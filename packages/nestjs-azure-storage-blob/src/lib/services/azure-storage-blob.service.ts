@@ -62,18 +62,18 @@ export class AzureStorageBlobService {
    * @throws {InvalidBlobNameError}
    */
   async getBlobClient(blobName: string): Promise<BlobClient> {
-    const { client, blobPath } = await this.getBlobContainerClient(blobName);
-
-    return client.getBlobClient(blobPath);
+    return this.getBlobContainerClient(blobName).then(
+      ({ client, blobPath }) => client.getBlobClient(blobPath),
+    );
   }
 
   /**
    * @throws {InvalidBlobNameError}
    */
   async getBlobBatchClient(container: string): Promise<BlobBatchClient> {
-    const client = await this.getContainerClient(container);
-
-    return client.getBlobBatchClient();
+    return this.getContainerClient(container).then(
+      (client) => client.getBlobBatchClient(),
+    );
   }
 
   /**
