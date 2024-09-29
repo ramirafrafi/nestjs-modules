@@ -1,7 +1,7 @@
 import type { Abilities, InferSubjects } from '@casl/ability';
 import { CaslAbility } from '../types/casl-ability.type';
 
-export interface ICaslPolicyClassHandler<
+export interface ICaslPolicyClass<
   T extends Abilities,
   S extends InferSubjects<unknown> = InferSubjects<unknown>,
 > {

@@ -8,11 +8,11 @@ import {
   REQUEST,
 } from '@nestjs/core';
 import { ICaslAbilityFactory } from '../interfaces/casl-ability-factory.interface';
-import { CaslPolicyHandler } from '../types/casl-policy-handler.type';
+import { CaslPolicy } from '../types/casl-policy.type';
 import { CASL_POLICIES_KEY } from '../decorators/casl-policies.decorator';
 import { CaslAbility } from '../types/casl-ability.type';
-import { ICaslPolicyFunctionHandler } from '../interfaces/casl-policy-function-handler.interface';
-import { ICaslPolicyClassHandler } from '../interfaces/casl-policy-class-handler.interface';
+import { ICaslPolicyHandler } from '../interfaces/casl-policy-handler.interface';
+import { ICaslPolicyClass } from '../interfaces/casl-policy-class.interface';
 import { PARAM_CASL_SUBJECTS } from '../decorators/casl-subject.decorator';
 import { CASL_ABILITY_FACTORY } from '../casl.tokens';
 
@@ -25,12 +25,13 @@ export class CaslPoliciesGuard<T extends Abilities> implements CanActivate {
     private caslAbilityFactory: ICaslAbilityFactory<T>,
     private reflector: Reflector,
     private moduleRef: ModuleRef,
-  ) {}
+  ) { }
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
-    const policyHandlers = this.reflector.getAllAndOverride<
-      Array<CaslPolicyHandler<T>>
-    >(CASL_POLICIES_KEY, [context.getHandler(), context.getClass()]);
+    const policyHandlers = this.reflector.getAllAndOverride<Array<CaslPolicy<T>>>(
+      CASL_POLICIES_KEY,
+      [context.getHandler(), context.getClass()],
+    );
 
     const ability = await defineAbility<CaslAbility<T>>(
       async (can, cannot) => this.caslAbilityFactory.defineAbility(can, cannot),
@@ -55,14 +56,14 @@ export class CaslPoliciesGuard<T extends Abilities> implements CanActivate {
   }
 
   private async execPolicyHandler(
-    handler: CaslPolicyHandler<T>,
+    handler: CaslPolicy<T>,
     ability: CaslAbility<T>,
   ) {
     // The handler is a class implementing ICaslPolicyClassHandler
     if ((handler as Type).name) {
       // We resolve an instance for the current request
       const handlerInstance = await this.moduleRef.resolve(
-        handler as Type<ICaslPolicyClassHandler<T>>,
+        handler as Type<ICaslPolicyClass<T>>,
         ContextIdFactory.getByRequest(this.request),
         { strict: false },
       );
@@ -72,7 +73,7 @@ export class CaslPoliciesGuard<T extends Abilities> implements CanActivate {
 
     // The handler is a function of the type ICaslPolicyFunctionHandler
     if (typeof handler === 'function') {
-      return (handler as ICaslPolicyFunctionHandler<T>)(ability);
+      return (handler as ICaslPolicyHandler<T>)(ability);
     }
 
     // The handler is an instance implementing ICaslPolicyClassHandler
@@ -80,7 +81,7 @@ export class CaslPoliciesGuard<T extends Abilities> implements CanActivate {
   }
 
   private async execObjectPolicyHandler(
-    handler: ICaslPolicyClassHandler<T>,
+    handler: ICaslPolicyClass<T>,
     ability: CaslAbility<T>,
   ) {
     const subject = await handler.resolveSubject?.();
