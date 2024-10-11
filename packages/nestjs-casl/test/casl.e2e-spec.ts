@@ -24,15 +24,33 @@ describe('CaslModule (e2e)', () => {
         await app.init();
     });
 
-    it('GET /allow returns 200', () =>
+    test('GET /casl-policies/allow returns 200', () =>
         request(app.getHttpServer())
-            .get('/allow')
+            .get('/casl-policies/allow')
             .expect(200),
     );
 
-    it('GET /deny returns 403', () =>
+    test('GET /casl-policies/deny returns 403', () =>
         request(app.getHttpServer())
-            .get('/deny')
+            .get('/casl-policies/deny')
+            .expect(403),
+    );
+
+    test('GET /casl-permissions/allow returns 200', () =>
+        request(app.getHttpServer())
+            .get('/casl-permissions/allow')
+            .expect(200),
+    );
+
+    test('GET /casl-permissions/deny returns 403', () =>
+        request(app.getHttpServer())
+            .get('/casl-permissions/deny')
+            .expect(403),
+    );
+
+    test('GET /casl-permissions/multi/deny returns 403', () =>
+        request(app.getHttpServer())
+            .get('/casl-permissions/multi/deny')
             .expect(403),
     );
 });

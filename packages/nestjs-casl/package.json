@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0",
-    "@casl/ability": "^6.7.1"
+    "@casl/ability": "^6.7.1",
+    "lodash": "^4.17.21"
   },
   "peerDependencies": {
     "@nestjs/common": "^10.0.2",

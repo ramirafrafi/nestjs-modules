@@ -5,9 +5,11 @@ import type {
 import { Abilities } from '@casl/ability';
 import { ICaslModuleOptions } from './casl-module-options.interface';
 
-type UseFactoryReturn<T extends Abilities> = ICaslModuleOptions<T> | Promise<ICaslModuleOptions<T>>;
+type AsyncOptions<T extends Abilities> = Omit<ICaslModuleOptions<T>, 'global'>;
 
-type BaseAsyncOptions = Pick<DynamicModule, 'global' | 'imports'> & Pick<FactoryProvider, 'inject'>;;
+type UseFactoryReturn<T extends Abilities> = AsyncOptions<T> | Promise<AsyncOptions<T>>;
+
+type BaseAsyncOptions = Pick<DynamicModule, 'global' | 'imports'> & Pick<FactoryProvider, 'inject'>;
 
 export interface ICaslModuleAsyncOptions<T extends Abilities> extends BaseAsyncOptions {
   useFactory: (...args: unknown[]) => UseFactoryReturn<T>;
