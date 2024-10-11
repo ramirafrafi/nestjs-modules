@@ -17,7 +17,7 @@ import { PARAM_CASL_SUBJECTS } from '../decorators/casl-subject.decorator';
 import { CASL_ABILITY_FACTORY } from '../casl.tokens';
 
 @Injectable()
-export class CaslPoliciesGuard<T extends Abilities> implements CanActivate {
+export class CaslGuard<T extends Abilities> implements CanActivate {
   constructor(
     @Inject(REQUEST)
     private request: Record<string, unknown>,

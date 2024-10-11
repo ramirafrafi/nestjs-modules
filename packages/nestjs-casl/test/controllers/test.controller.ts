@@ -1,12 +1,12 @@
 import { Controller, Get, UseGuards } from "@nestjs/common";
-import { CaslPoliciesGuard } from "../../src/lib/guards/casl-policies.guard";
+import { CaslGuard } from "../../src/lib/guards/casl.guard";
 import { CaslPolicies } from "../../src/lib/decorators/casl-policies.decorator";
 import { TestAction } from "../ability/test.action";
 import { CaslPermissions } from "../../src/lib/decorators/casl-permissions.decorator";
 
 @Controller()
 export class TestController {
-    @UseGuards(CaslPoliciesGuard)
+    @UseGuards(CaslGuard)
     @CaslPolicies((ability) => ability.can(TestAction.Allow))
     @Get('casl-policies/allow')
     allowPolicy() {
@@ -16,7 +16,7 @@ export class TestController {
         };
     }
 
-    @UseGuards(CaslPoliciesGuard)
+    @UseGuards(CaslGuard)
     @CaslPolicies((ability) => ability.can(TestAction.Deny))
     @Get('casl-policies/deny')
     denyPolicy() {
@@ -26,7 +26,7 @@ export class TestController {
         };
     }
 
-    @UseGuards(CaslPoliciesGuard)
+    @UseGuards(CaslGuard)
     @CaslPermissions(TestAction.Allow)
     @Get('casl-permissions/allow')
     allowPermission() {
@@ -36,7 +36,7 @@ export class TestController {
         };
     }
 
-    @UseGuards(CaslPoliciesGuard)
+    @UseGuards(CaslGuard)
     @CaslPermissions(TestAction.Deny)
     @Get('casl-permissions/deny')
     denyPermission() {
@@ -46,7 +46,7 @@ export class TestController {
         };
     }
 
-    @UseGuards(CaslPoliciesGuard)
+    @UseGuards(CaslGuard)
     @CaslPermissions(TestAction.Allow, TestAction.Deny)
     @Get('casl-permissions/multi/deny')
     denyMultiPermissions() {

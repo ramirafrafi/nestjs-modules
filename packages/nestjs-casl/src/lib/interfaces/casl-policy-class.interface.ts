@@ -4,8 +4,9 @@ import { CaslAbility } from '../types/casl-ability.type';
 export interface ICaslPolicyClass<
   T extends Abilities,
   S extends InferSubjects<unknown> = InferSubjects<unknown>,
+  R = unknown,
 > {
   handle(ability: CaslAbility<T>, subject?: S): Promise<boolean>;
 
-  resolveSubject?(): Promise<S | undefined>;
+  resolveSubject?(): Promise<R | undefined>;
 }
