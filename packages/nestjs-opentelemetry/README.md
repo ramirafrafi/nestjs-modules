@@ -1,4 +1,4 @@
-⬅️ [**Return to modules list**](../..)
+⬅️ [**Return to modules list**](../../README.md)
 
 # nestjs-opentelemetry [Deprecated]
 
