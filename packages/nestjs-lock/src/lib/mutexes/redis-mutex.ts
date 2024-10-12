@@ -15,12 +15,12 @@ export class RedisMutex implements ILock {
     readonly options: RedisMutexOptions = {},
   ) { }
 
-  get readKey(): string {
+  get redisKeyName(): string {
     return `@simple-redis-mutex:lock-${this.keyName}`;
   }
 
   async isLocked(): Promise<boolean> {
-    return (await this.redis.exists(this.readKey)) === 1;
+    return (await this.redis.exists(this.redisKeyName)) === 1;
   }
 
   async acquire(): Promise<() => void> {
