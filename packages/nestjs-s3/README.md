@@ -1,6 +1,6 @@
 ⬅️ [**Return to modules list**](../../README.md)
 
-# nestjs-s3
+# nestjs-s3 [Deprecated]
 
 ## Overview
 This library is a NestJS module that wraps the **AWS S3 Node.js SDKs** into a well defined set of services and methods.
