@@ -11,7 +11,7 @@ import {
 import { Inject, Injectable } from '@nestjs/common';
 import { AZURE_STORAGE_CLIENT, AZURE_STORAGE_OPTIONS } from '../azure-storage-blob.tokens';
 import { IAzureBlobModuleOptions } from '../interfaces/azure-blob-module-options.interface';
-import { storageAccountUrl } from '../utils/storage-account-url';
+import { storageAccountUrl } from '../utils';
 import { IBlobLocation } from '../interfaces/blob-location.interface';
 import { InvalidBlobNameError } from '../errors/invalid-blob-name.error';
 

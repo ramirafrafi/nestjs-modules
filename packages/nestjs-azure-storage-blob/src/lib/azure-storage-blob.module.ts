@@ -10,7 +10,7 @@ import { AzureStorageBlobService } from './services/azure-storage-blob.service';
 import { IAzureBlobModuleOptions } from './interfaces/azure-blob-module-options.interface';
 import { BlobServiceClient, StorageSharedKeyCredential } from '@azure/storage-blob';
 import { IAzureBlobModuleAsyncOptions } from './interfaces/azure-blob-module-async-options.interface';
-import { storageAccountUrl } from './utils/storage-account-url';
+import { storageAccountUrl } from './utils';
 
 const commonProviders: Provider[] = [
   {
