@@ -21,7 +21,6 @@
       ],
       "@nestjs-casl": ["packages/nestjs-casl/src/index.ts"],
       "@nestjs-lock": ["packages/nestjs-lock/src/index.ts"],
-      "@nestjs-opentelemetry": ["packages/nestjs-opentelemetry/src/index.ts"],
       "@nestjs-s3": ["packages/nestjs-s3/src/index.ts"]
     }
   },
