@@ -9,4 +9,4 @@ This repository groups a set of open source NestJS modules, that are well design
 * [nestjs-casl](./packages/nestjs-casl/README.md)
 * [nestjs-azure-storage-blob](./packages/nestjs-azure-storage-blob/README.md)
 * [nestjs-lock](./packages/nestjs-lock/README.md)
-* [nestjs-s3](./packages/nestjs-s3/README.md)
+* [nestjs-s3](./packages/nestjs-s3/README.md) **[Depcrecated]**
