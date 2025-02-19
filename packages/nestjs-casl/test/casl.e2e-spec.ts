@@ -4,8 +4,8 @@ import { INestApplication } from "@nestjs/common";
 import { Test, TestingModule } from '@nestjs/testing';
 import { Server } from "http";
 import { CaslModule } from '../src/lib/casl.module';
-import { TestController } from './controllers/test.controller';
 import { TestAbilityFactory } from './ability/test.ability-factory';
+import { TestController } from './controllers/test.controller';
 
 describe('CaslModule (e2e)', () => {
     let app: INestApplication<Server>;
@@ -14,7 +14,9 @@ describe('CaslModule (e2e)', () => {
         const moduleRef: TestingModule = await Test.createTestingModule({
             imports: [CaslModule.forRoot({
                 global: true,
-                abilityFactory: TestAbilityFactory,
+                options: {
+                    abilityFactory: TestAbilityFactory,
+                },
             })],
             controllers: [TestController],
         }).compile();
