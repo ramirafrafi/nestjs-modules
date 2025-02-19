@@ -1,5 +1,4 @@
 export * from './lib/casl.module';
-export * from './lib/casl.tokens';
 export * from './lib/decorators/casl-permissions.decorator';
 export * from './lib/decorators/casl-policies.decorator';
 export * from './lib/decorators/casl-subject.decorator';
