@@ -1,12 +1,10 @@
-# NestJS Modules
-
-## Overview
-Welcome to the **NestJS Modules** project 👋.
-
-This repository groups a set of open source NestJS modules, that are well designed and tested.
+<h1 align="center">
+    NestJS Modules
+</h1>
+<p align="center">
+    Welcome to the <b>NestJS Modules</b> project 👋.<br>
+    This repository groups a set of open source NestJS modules, that are well designed and tested.
+</p>
 
 ## List of available modules
-* [nestjs-casl](./packages/nestjs-casl/README.md)
-* [nestjs-azure-storage-blob](./packages/nestjs-azure-storage-blob/README.md)
-* [nestjs-lock](./packages/nestjs-lock/README.md)
-* [nestjs-s3](./packages/nestjs-s3/README.md) **[Depcrecated]**
+* [nestjs-casl](/packages/nestjs-casl/README.md)

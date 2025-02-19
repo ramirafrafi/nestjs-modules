@@ -1,11 +1,12 @@
-⬅️ [**Return to modules list**](../../README.md)
+⬅️ [**Return to Index**](/)
 
-# nestjs-casl
-
-## Overview
-This library is a NestJS module that wraps [**CASL**](https://casl.js.org/), a powerful JavaScript package for access authorization management.
-
-This module is the NestJS way to integrate CASL, leveraging the usage of NestJS features such as guards, dependency injection and etc..
+<h1 align="center">
+  NestJS CASL
+</h1>
+<p align="center">
+  This library is a NestJS module that wraps <a href="https://casl.js.org/">CASL</a>, a powerful JavaScript package for access authorization management.<br>
+  This module is the NestJS way to integrate CASL, leveraging the usage of NestJS features such as guards, dependency injection and etc..
+</p>
 
 ## Terminology
 - **Action:** Describes what user can actually do in the app. Action is a word (usually a verb) which depends on the business logic (e.g., `prolong`, `read`). Very often it will be a list of words from CRUD - `create`, `read`, `update` and `delete`.
