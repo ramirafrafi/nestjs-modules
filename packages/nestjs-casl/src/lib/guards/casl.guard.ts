@@ -7,14 +7,13 @@ import {
   Reflector,
   REQUEST,
 } from '@nestjs/core';
-import { ICaslAbilityFactory } from '../interfaces/casl-ability-factory.interface';
-import { CaslPolicy } from '../types/casl-policy.type';
 import { CASL_POLICIES_KEY } from '../decorators/casl-policies.decorator';
-import { CaslAbility } from '../types/casl-ability.type';
-import { ICaslPolicyHandler } from '../interfaces/casl-policy-handler.interface';
-import { ICaslPolicyClass } from '../interfaces/casl-policy-class.interface';
 import { PARAM_CASL_SUBJECTS } from '../decorators/casl-subject.decorator';
-import { CASL_ABILITY_FACTORY } from '../casl.tokens';
+import { CASL_ABILITY_FACTORY, ICaslAbilityFactory } from '../interfaces/casl-ability-factory.interface';
+import { ICaslPolicyClass } from '../interfaces/casl-policy-class.interface';
+import { ICaslPolicyHandler } from '../interfaces/casl-policy-handler.interface';
+import { CaslAbility } from '../types/casl-ability.type';
+import { CaslPolicy } from '../types/casl-policy.type';
 
 @Injectable()
 export class CaslGuard<T extends Abilities> implements CanActivate {
