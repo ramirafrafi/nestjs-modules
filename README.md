@@ -7,4 +7,4 @@
 </p>
 
 ## List of available modules
-* [nestjs-casl](/packages/nestjs-casl/README.md)
+* [nestjs-casl](/packages/nestjs-casl/)
