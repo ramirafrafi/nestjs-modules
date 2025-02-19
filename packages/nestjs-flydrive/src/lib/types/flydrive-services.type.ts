@@ -1,3 +1,3 @@
 import { DriverContract } from 'flydrive/build/src/types';
 
-export type FlyDriveServices = Record<string, () => DriverContract>;
+export type FlydriveServices = Record<string, () => DriverContract>;
