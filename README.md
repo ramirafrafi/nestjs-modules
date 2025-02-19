@@ -7,4 +7,5 @@
 </p>
 
 ## List of available modules
-* [nestjs-casl](/packages/nestjs-casl/)
+- [nestjs-casl](/packages/nestjs-casl/)
+- [nestjs-flydrive](/packages/nestjs-flydrive/)

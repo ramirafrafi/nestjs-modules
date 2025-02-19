@@ -1,0 +1,33 @@
+{
+  "name": "nestjs-flydrive",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nestjs-flydrive/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/nestjs-flydrive",
+        "tsConfig": "packages/nestjs-flydrive/tsconfig.lib.json",
+        "packageJson": "packages/nestjs-flydrive/package.json",
+        "main": "packages/nestjs-flydrive/src/index.ts",
+        "assets": ["packages/nestjs-flydrive/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
