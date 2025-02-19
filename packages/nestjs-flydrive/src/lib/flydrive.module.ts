@@ -11,7 +11,7 @@ export const FLYDRIVE_MANAGER: InjectionToken = Symbol('FLYDRIVE_MANAGER');
 
 @Module({})
 export class FlydriveModule {
-  static forRoot<T extends FlydriveServices>({
+  static forRoot<T extends FlydriveServices = FlydriveServices>({
     global,
     options,
   }: IFlydriveModuleOptions<T>): DynamicModule {
@@ -28,7 +28,7 @@ export class FlydriveModule {
     };
   }
 
-  static forRootAsync<T extends FlydriveServices>({
+  static forRootAsync<T extends FlydriveServices = FlydriveServices>({
     global,
     ...options
   }: IFlydriveModuleAsyncOptions<T>): DynamicModule {
