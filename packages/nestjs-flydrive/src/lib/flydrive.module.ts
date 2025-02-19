@@ -2,22 +2,22 @@ import type { DynamicModule, InjectionToken } from '@nestjs/common';
 import { Module } from '@nestjs/common';
 import { DriveManager } from 'flydrive';
 import {
-  IFlyDriveModuleAsyncOptions,
-  IFlyDriveModuleOptions,
+  IFlydriveModuleAsyncOptions,
+  IFlydriveModuleOptions,
 } from './interfaces/flydrive-module-options.interface';
-import { FlyDriveServices } from './types/flydrive-services.type';
+import { FlydriveServices } from './types/flydrive-services.type';
 
 export const FLYDRIVE_MANAGER: InjectionToken = Symbol('FLYDRIVE_MANAGER');
 
 @Module({})
-export class FlyDriveModule {
-  static forRoot<T extends FlyDriveServices>({
+export class FlydriveModule {
+  static forRoot<T extends FlydriveServices>({
     global,
     options,
-  }: IFlyDriveModuleOptions<T>): DynamicModule {
+  }: IFlydriveModuleOptions<T>): DynamicModule {
     return {
       global,
-      module: FlyDriveModule,
+      module: FlydriveModule,
       providers: [
         {
           provide: FLYDRIVE_MANAGER,
@@ -28,13 +28,13 @@ export class FlyDriveModule {
     };
   }
 
-  static forRootAsync<T extends FlyDriveServices>({
+  static forRootAsync<T extends FlydriveServices>({
     global,
     ...options
-  }: IFlyDriveModuleAsyncOptions<T>): DynamicModule {
+  }: IFlydriveModuleAsyncOptions<T>): DynamicModule {
     return {
       global,
-      module: FlyDriveModule,
+      module: FlydriveModule,
       imports: options.imports,
       providers: [
         {

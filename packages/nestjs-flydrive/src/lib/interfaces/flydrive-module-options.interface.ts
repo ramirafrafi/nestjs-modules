@@ -1,16 +1,16 @@
 import { DynamicModule, FactoryProvider } from '@nestjs/common';
 import { DriveManagerOptions } from 'flydrive/build/src/types';
-import { FlyDriveServices } from '../types/flydrive-services.type';
+import { FlydriveServices } from '../types/flydrive-services.type';
 
-type IFlyDriveOptions<T extends FlyDriveServices> = DriveManagerOptions<T>;
+type IFlydriveOptions<T extends FlydriveServices> = DriveManagerOptions<T>;
 
-export interface IFlyDriveModuleOptions<T extends FlyDriveServices>
+export interface IFlydriveModuleOptions<T extends FlydriveServices>
   extends Pick<DynamicModule, 'global'> {
   options: DriveManagerOptions<T>;
 }
 
-export type IFlyDriveModuleAsyncOptions<T extends FlyDriveServices> = Pick<
+export type IFlydriveModuleAsyncOptions<T extends FlydriveServices> = Pick<
   DynamicModule,
   'global' | 'imports'
 > &
-  Pick<FactoryProvider<IFlyDriveOptions<T>>, 'inject' | 'useFactory'>;
+  Pick<FactoryProvider<IFlydriveOptions<T>>, 'inject' | 'useFactory'>;
