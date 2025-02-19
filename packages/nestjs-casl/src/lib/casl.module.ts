@@ -1,8 +1,8 @@
 import type { Abilities } from '@casl/ability';
 import type { DynamicModule, Type } from '@nestjs/common';
 import { Module, Scope } from '@nestjs/common';
+import { CASL_ABILITY_FACTORY } from './interfaces/casl-ability-factory.interface';
 import { ICaslModuleAsyncOptions } from './interfaces/casl-module-async-options.interface';
-import { CASL_ABILITY_FACTORY } from './casl.tokens';
 import { ICaslModuleOptions } from './interfaces/casl-module-options.interface';
 
 @Module({})

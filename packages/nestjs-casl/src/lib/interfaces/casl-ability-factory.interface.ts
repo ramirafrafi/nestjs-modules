@@ -1,6 +1,9 @@
 import type { Abilities } from '@casl/ability';
+import { InjectionToken } from '@nestjs/common';
 import { CanRule } from '../types/can-rule.type';
 import { CannotRule } from '../types/cannot-rule.type';
+
+export const CASL_ABILITY_FACTORY: InjectionToken = Symbol('CASL_ABILITY_FACTORY');
 
 export interface ICaslAbilityFactory<T extends Abilities> {
   /**
