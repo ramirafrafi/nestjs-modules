@@ -1,0 +1,15 @@
+{
+  "name": "@ramirafrafi/nestjs-flystorage",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "lodash": "^4.17.21",
+    "@flystorage/file-storage": "^1.0.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.2"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
+}
