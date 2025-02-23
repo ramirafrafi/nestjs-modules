@@ -1152,6 +1152,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@flystorage/file-storage@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@flystorage/file-storage/-/file-storage-1.0.1.tgz#3cc75d5f38aed0dd7d7d1ae5250716e29ed80963"
+  integrity sha512-ditKPEsBIz2ZJ96870Kq0xydv76vTA3tyoMrKK7T9VI/DS7vYJ0HSrroDzKeO7cbZ4JcoywpQwwKdcG1YlEM+w==
+
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz#d78e481a039f7566ecc9660b4ea7fe6b1fec442b"

@@ -4,7 +4,7 @@
   NestJS CASL
 </h1>
 <p align="center">
-  This library is a NestJS module that wraps <a href="https://casl.js.org/">CASL</a>, a powerful JavaScript package for access authorization management.<br>
+  This library is a NestJS module that wraps <a href="https://casl.js.org/">CASL</a>, a powerful library for access authorization management.<br>
 </p>
 
 ## Terminology
