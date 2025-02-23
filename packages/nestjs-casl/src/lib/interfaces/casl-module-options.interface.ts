@@ -1,9 +1,18 @@
-import { Abilities } from "@casl/ability";
-import { ICaslAbilityFactory } from "./casl-ability-factory.interface";
-import { DynamicModule, Type } from "@nestjs/common";
+import { Abilities } from '@casl/ability';
+import { DynamicModule, FactoryProvider, Type } from '@nestjs/common';
+import { ICaslAbilityFactory } from './casl-ability-factory.interface';
 
-type BaseOptions = Pick<DynamicModule, 'global'>;
+type ICaslOptions<T extends Abilities> = {
+  abilityFactory: ICaslAbilityFactory<T> | Type<ICaslAbilityFactory<T>>;
+};
 
-export interface ICaslModuleOptions<T extends Abilities> extends BaseOptions {
-    abilityFactory: ICaslAbilityFactory<T> | Type<ICaslAbilityFactory<T>>;
+export interface ICaslModuleOptions<T extends Abilities>
+  extends Pick<DynamicModule, 'global'> {
+  options: ICaslOptions<T>;
 }
+
+export type ICaslModuleAsyncOptions<T extends Abilities> = Pick<
+  DynamicModule,
+  'global' | 'imports'
+> &
+  Pick<FactoryProvider<ICaslOptions<T>>, 'inject' | 'useFactory'>;
