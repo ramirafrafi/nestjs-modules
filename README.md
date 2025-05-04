@@ -8,3 +8,4 @@
 
 ## List of modules
 * [nestjs-casl](/packages/nestjs-casl/)
+* [nestjs-flystorage](/packages/nestjs-flystorage/)
